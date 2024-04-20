@@ -1,7 +1,11 @@
+import Search from './search.components'
+
 const Content = () => {
   return (
     <div className='content'>
-      <h1>Content</h1>
+      <Search searchType='text' />
+      <br />
+      <Search searchType='file' />
     </div>
   )
 }

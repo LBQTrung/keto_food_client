@@ -57,7 +57,7 @@ body {
 }
 
 .navbar-item {
-    width: 100px;
+    width: 60px;
     margin-right: 50px;
     font-size: 18px;
     font-weight: 600;
@@ -103,6 +103,89 @@ hr {
     background-color: var(--main-color);
 }
 
+/* Content */
+
 .content {
-    
+    margin-top: 20px;
+}
+
+/* Search in Content */
+.search {
+    background-image: url('../image/background2.jpg'); /* Thay 'background.jpg' bằng đường dẫn đến hình nền của bạn */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Điều này làm cho background chìm luôn */
+    padding: 40px;
+}
+
+.search-heading {
+    font-size: 55px;
+    color: #fff;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.search-form-group {
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-left: 30px;
+    width: 300px;
+    height: 44px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-form-input {
+    font-size: 22px;
+    color: #333;
+    font-weight: 400;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+.search-form-input::placeholder {
+    font-size: 22px;
+    color: #888;
+    font-weight: 400;
+}
+
+.search-form-submit {
+    outline: none;
+    border: none;
+    height: 44px;
+    padding: 0 10px;
+    background-color: #fff;
+    transition: opacity 0.3s linear;
+}
+
+.search-form-submit:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.search-form-submit i {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+/* Upload file */
+.search-form-input--file {
+    display: none;
+}
+
+.search-form-label--file {
+    font-size: 20px;
+    color: #888;
+    font-weight: 500;
+    line-height: 44px;
 }

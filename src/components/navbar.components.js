@@ -3,8 +3,8 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='navbar-content'>
         <ul className='navbar-list'>
-          <li className='navbar-item'>HOME</li>
-          <li className='navbar-item navbar-item--active'>RECIPE</li>
+          <li className='navbar-item navbar-item--active'>HOME</li>
+          <li className='navbar-item'>RECIPE</li>
           <li className='navbar-item'>EXPLORE</li>
           <li className='navbar-item'>DIET</li>
         </ul>
