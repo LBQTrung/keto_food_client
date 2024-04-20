@@ -1,0 +1,108 @@
+:root {
+    --navbar-height: 100px;
+    --main-color: #BC8741;
+    --text-color: #D0D8EE;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../image/background.jpg'); /* Thay 'background.jpg' bằng đường dẫn đến hình nền của bạn */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Điều này làm cho background chìm luôn */
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+.app .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #545454; /* Màu xám với độ mờ 50% */
+    opacity: 0.95;
+    z-index: -1;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-item {
+    width: 100px;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: font-size 2s linear;
+    transition: transform 2s linear;
+}
+
+.navbar-item:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.navbar-item--active {
+    font-weight: 600;
+    transform: translateY(5px);
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-user-avatar i {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-right: 10px;
+}
+
+.navbar-user-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+
+
+hr {
+    height: 3px;
+    border: none;
+    background-color: var(--main-color);
+}
+
+.content {
+    
+}

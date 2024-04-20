@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif
+}
+
+/* Responsive */
+
+.grid{
+  width: 1080px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid__full-width{
+  width: 100%;
+}
+
+.grid__row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.grid__column-2{
+  width: calc(100% / 12 * 2);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.grid__column-2-10{
+  width: 20%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.grid__column-10{
+  width: calc(100% / 12 * 10);
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* End Responsive */
