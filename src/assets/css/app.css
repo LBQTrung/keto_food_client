@@ -67,12 +67,17 @@ body {
   transition: transform 2s linear;
 }
 
-.navbar-item:hover {
+.navbar-item a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar-item a:hover {
   cursor: pointer;
   color: var(--main-color);
 }
 
-.navbar-item--active {
+.navbar-item--active a {
   font-weight: 600;
   transform: translateY(5px);
   font-size: 22px;
@@ -283,6 +288,31 @@ hr {
 }
 
 .meal-item-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.upload-seleted-image {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-seleted-image button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 5px 20px;
+  border-radius: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: opacity 0.1s linear;
+}
+
+.upload-seleted-image button:hover {
   cursor: pointer;
   opacity: 0.8;
 }

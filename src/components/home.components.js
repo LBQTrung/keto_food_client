@@ -1,7 +1,7 @@
 import MealsListByCatelog from './mealListByCatelog.components'
 import Search from './search.components'
 
-const Content = () => {
+const Home = () => {
   return (
     <div className='content grid'>
       <Search searchType='text' />
@@ -10,4 +10,4 @@ const Content = () => {
   )
 }
 
-export default Content
+export default Home
