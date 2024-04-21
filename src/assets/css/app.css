@@ -316,3 +316,63 @@ hr {
   cursor: pointer;
   opacity: 0.8;
 }
+
+/* Loading effect */
+.loading-container {
+  position: fixed; /* Đặt vị trí của loading container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255); /* Đặt một lớp mờ cho background */
+}
+
+/* Classification session */
+.classification-result {
+  margin-bottom: 20px;
+}
+
+.classification-result-heading {
+  color: #fff;
+  font-weight: 500;
+}
+
+.classification-result-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.classification-img {
+  position: relative;
+}
+
+.classification-img-container {
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.classification-img button {
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  outline: none;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #789048;
+  color: #fff;
+  transition: background-color 0.3s linear;
+}
+
+.classification-img button:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+}

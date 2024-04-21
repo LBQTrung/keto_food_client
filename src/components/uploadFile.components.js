@@ -1,8 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
+import { ClassificationContext, LoadingContext } from './contextProvider.components'
 
 const UploadFileForm = () => {
   const [selectedImageToCallAPI, setSelectedImageToCallAPI] = useState(null)
   const [selectedImageToPreview, setSelectedImageToPreview] = useState(null)
+
+  const { setLoading } = useContext(LoadingContext)
+  const { setClassification } = useContext(ClassificationContext)
   const inputRef = useRef(null)
   const handleImageChange = (event) => {
     const imageFile = event.target.files[0]
@@ -21,19 +25,40 @@ const UploadFileForm = () => {
         console.log('Please select an image.')
         return
       }
+      setLoading(true)
       const formData = new FormData()
       formData.append('image', selectedImageToCallAPI)
 
-      const response = await fetch('http://localhost:4000/media/upload', {
+      const uploadResponse = await fetch('http://localhost:4000/media/upload', {
         method: 'POST',
         body: formData
       })
-      if (response.ok) {
-        const data = await response.json()
-        console.log('API response:', data)
-      } else {
-        console.error('Failed to call API:', response.statusText)
+      if (!uploadResponse.ok) {
+        console.error('Failed to call API:', uploadResponse.statusText)
       }
+
+      const uploadData = await uploadResponse.json()
+      const { filename, image_url } = uploadData.result
+
+      const classificationBody = {
+        filename: filename
+      }
+      const classificationResponse = await fetch('http://localhost:4000/food/classify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(classificationBody)
+      })
+
+      const classificationData = await classificationResponse.json()
+      console.log(classificationData)
+
+      const foodClass = classificationData.result.class
+
+      setClassification(foodClass)
+
+      setLoading(false)
     } catch (error) {
       console.error('Error:', error)
     }
