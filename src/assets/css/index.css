@@ -5,48 +5,31 @@
 }
 
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Responsive */
 
-.grid{
+.grid {
   width: 1080px;
   max-width: 100%;
   margin: 0 auto;
 }
 
-.grid__full-width{
+.grid__full-width {
   width: 100%;
 }
 
-.grid__row{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -5px;
-  margin-right: -5px;
+.grid-container-2-10 {
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
 
-.grid__column-2{
-  width: calc(100% / 12 * 2);
-  padding-left: 5px;
-  padding-right: 5px;
+.grid-container-3-3-3-3 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 20px;
 }
-
-.grid__column-2-10{
-  width: 20%;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.grid__column-10{
-  width: calc(100% / 12 * 10);
-  padding-left: 5px;
-  padding-right: 5px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 
 /* End Responsive */

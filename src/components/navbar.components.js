@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav className='navbar'>
-      <div className='navbar-content'>
+      <div className='navbar-content grid'>
         <ul className='navbar-list'>
           <li className='navbar-item navbar-item--active'>HOME</li>
           <li className='navbar-item'>RECIPE</li>
@@ -15,7 +15,6 @@ const Navbar = () => {
           <span className='navbar-user-name'>MinhT</span>
         </div>
       </div>
-      <hr />
     </nav>
   )
 }

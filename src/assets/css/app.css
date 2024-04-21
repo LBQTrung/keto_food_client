@@ -1,191 +1,288 @@
 :root {
-    --navbar-height: 100px;
-    --main-color: #BC8741;
-    --text-color: #D0D8EE;
+  --navbar-height: 100px;
+  --main-color: #bc8741;
+  --text-color: #d0d8ee;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('../image/background.jpg'); /* Thay 'background.jpg' bằng đường dẫn đến hình nền của bạn */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Điều này làm cho background chìm luôn */
+  margin: 0;
+  padding: 0;
+  background-image: url('../image/background.jpg'); /* Thay 'background.jpg' bằng đường dẫn đến hình nền của bạn */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Điều này làm cho background chìm luôn */
 }
 
 .app {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .app .background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #545454; /* Màu xám với độ mờ 50% */
-    opacity: 0.95;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #545454; /* Màu xám với độ mờ 50% */
+  opacity: 0.95;
+  z-index: -1;
 }
 
 .wrapper {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 /* Navbar */
 .navbar {
-    position: sticky;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
 }
 
 .navbar-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
 }
 
 .navbar-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-item {
-    width: 60px;
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--text-color);
-    transition: font-size 2s linear;
-    transition: transform 2s linear;
+  width: 60px;
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: font-size 2s linear;
+  transition: transform 2s linear;
 }
 
 .navbar-item:hover {
-    cursor: pointer;
-    color: var(--main-color);
+  cursor: pointer;
+  color: var(--main-color);
 }
 
 .navbar-item--active {
-    font-weight: 600;
-    transform: translateY(5px);
-    font-size: 22px;
-    color: var(--main-color);
+  font-weight: 600;
+  transform: translateY(5px);
+  font-size: 22px;
+  color: var(--main-color);
 }
 
 .navbar-user {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-user-avatar i {
-    font-size: 30px;
-    color: var(--main-color);
-    margin-right: 10px;
+  font-size: 30px;
+  color: var(--main-color);
+  margin-right: 10px;
 }
 
 .navbar-user-name {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text-color);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
-
-
 hr {
-    height: 3px;
-    border: none;
-    background-color: var(--main-color);
+  height: 3px;
+  border: none;
+  background-color: var(--main-color);
 }
 
 /* Content */
 
 .content {
-    margin-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
-/* Search in Content */
+/* Search Section in Content */
 .search {
-    background-image: url('../image/background2.jpg'); /* Thay 'background.jpg' bằng đường dẫn đến hình nền của bạn */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Điều này làm cho background chìm luôn */
-    padding: 40px;
+  background-image: url('../image/background2.jpg'); /* Thay 'background.jpg' bằng đường dẫn đến hình nền của bạn */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Điều này làm cho background chìm luôn */
+  padding: 40px;
 }
 
 .search-heading {
-    font-size: 55px;
-    color: #fff;
-    text-align: center;
+  font-size: 55px;
+  color: #fff;
+  text-align: center;
 }
 
 .search-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .search-form-group {
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: #fff;
-    padding-left: 30px;
-    width: 300px;
-    height: 44px;
-    border-radius: 20px;
-    overflow: hidden;
+  display: inline-flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding-left: 30px;
+  width: 300px;
+  height: 44px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .search-form-input {
-    font-size: 22px;
-    color: #333;
-    font-weight: 400;
-    width: 80%;
-    border: none;
-    outline: none;
+  font-size: 22px;
+  color: #333;
+  font-weight: 400;
+  width: 80%;
+  border: none;
+  outline: none;
 }
 
 .search-form-input::placeholder {
-    font-size: 22px;
-    color: #888;
-    font-weight: 400;
+  font-size: 22px;
+  color: #888;
+  font-weight: 400;
 }
 
 .search-form-submit {
-    outline: none;
-    border: none;
-    height: 44px;
-    padding: 0 10px;
-    background-color: #fff;
-    transition: opacity 0.3s linear;
+  outline: none;
+  border: none;
+  height: 44px;
+  padding: 0 10px;
+  background-color: #fff;
+  transition: opacity 0.3s linear;
 }
 
 .search-form-submit:hover {
-    cursor: pointer;
-    opacity: 0.7;
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .search-form-submit i {
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--main-color);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--main-color);
 }
 
 /* Upload file */
 .search-form-input--file {
-    display: none;
+  display: none;
 }
 
 .search-form-label--file {
-    font-size: 20px;
-    color: #888;
-    font-weight: 500;
-    line-height: 44px;
+  font-size: 20px;
+  color: #888;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+/* Meal section in Content */
+.meal-section {
+  margin-top: 25px;
+}
+
+/* Catelog side bar */
+.catelog {
+  width: 100%;
+}
+
+.catelog-list {
+  list-style: none;
+}
+
+.catelog-item {
+  width: 100%;
+  /* margin-top: 10px; */
+}
+
+.catelog-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.catelog-item-link {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #98968a;
+  background-color: #ffffff;
+  width: 90%;
+  padding: 8px 0;
+  border-radius: 18px;
+}
+
+.catelog-item-link:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.catelog-item-link--active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* Meal item */
+.meal-item {
+  width: 100%;
+  background-color: #999;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.meal-item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.meal-item-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meal-item-origin-and-button {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-item-origin {
+  font-size: 16px;
+  color: #333;
+}
+
+.meal-item-button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 5px 20px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.meal-item-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }

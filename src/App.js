@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='app'>
       <div className='background-overlay'></div>
-      <div className='wrapper grid'>
+      <div className='wrapper'>
         <Navbar />
         <Content />
       </div>
