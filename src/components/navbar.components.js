@@ -1,21 +1,58 @@
-import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { ClassificationContext, InstructionContext } from './contextProvider.components'
 
 const Navbar = () => {
+  const { classificationDispatch } = useContext(ClassificationContext)
+  const { instructionDispatch } = useContext(InstructionContext)
+  const location = useLocation()
   return (
     <nav className='navbar'>
       <div className='navbar-content grid'>
         <ul className='navbar-list'>
-          <li className='navbar-item navbar-item--active'>
-            <Link to='/'>HOME</Link>
+          <li className={`navbar-item ${location.pathname === '/' ? 'navbar-item--active' : ''}`}>
+            <Link
+              onClick={() => {
+                classificationDispatch({ type: 'RESET_CLASSIFICATION' })
+                instructionDispatch({ type: 'RESET_INSTRUCTION' })
+              }}
+              to='/'
+            >
+              HOME
+            </Link>
           </li>
-          <li className='navbar-item'>
-            <Link to='/recipe'>RECIPE</Link>
+          <li className={`navbar-item ${location.pathname === '/recipe' ? 'navbar-item--active' : ''}`}>
+            <Link
+              onClick={() => {
+                classificationDispatch({ type: 'RESET_CLASSIFICATION' })
+                instructionDispatch({ type: 'RESET_INSTRUCTION' })
+              }}
+              to='/recipe'
+            >
+              RECIPE
+            </Link>
           </li>
-          <li className='navbar-item'>
-            <Link to='/'>EXPLORE</Link>
+          <li className={`navbar-item ${location.pathname === '/explore' ? 'navbar-item--active' : ''}`}>
+            <Link
+              onClick={() => {
+                classificationDispatch({ type: 'RESET_CLASSIFICATION' })
+                instructionDispatch({ type: 'RESET_INSTRUCTION' })
+              }}
+              to='/explore'
+            >
+              EXPLORE
+            </Link>
           </li>
-          <li className='navbar-item'>
-            <Link to='/'>DIET</Link>
+          <li className={`navbar-item ${location.pathname === '/diet' ? 'navbar-item--active' : ''}`}>
+            <Link
+              onClick={() => {
+                classificationDispatch({ type: 'RESET_CLASSIFICATION' })
+                instructionDispatch({ type: 'RESET_INSTRUCTION' })
+              }}
+              to='/diet'
+            >
+              DIET
+            </Link>
           </li>
         </ul>
         <div className='navbar-user'>

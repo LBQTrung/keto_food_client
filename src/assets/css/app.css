@@ -58,7 +58,7 @@ body {
 }
 
 .navbar-item {
-  width: 60px;
+  width: 80px;
   margin-right: 50px;
   font-size: 18px;
   font-weight: 600;
@@ -375,4 +375,94 @@ hr {
 .classification-img button:hover {
   cursor: pointer;
   background-color: var(--main-color);
+}
+
+/* Meal details */
+.meal-details {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+  height: 80vh;
+}
+
+.meal-details-info {
+  border-right: 10px solid #f1f1f1;
+  padding-right: 20px;
+}
+
+.meal-details-info-img {
+  width: 250px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.meal-details-info-name {
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.meal-details-side-dishes-heading {
+  margin-top: 30px;
+  color: #e8e8e8;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.meal-details-side-dishes-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.meal-details-side-dishes-item {
+  font-size: 18px;
+  color: #e8e8e8;
+  margin-top: 5px;
+}
+
+.meal-details-intructions {
+  /* height: 60vh; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.meal-details-intructions-heading {
+  text-align: center;
+  color: #e8e8e8;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.meal-details-instructions-list {
+  list-style: none;
+}
+
+.meal-details-instructions-item {
+  font-size: 18px;
+  color: #e8e8e8;
+  margin-top: 15px;
+}
+
+.meal-details-ingredients-heading {
+  text-align: center;
+  color: #e8e8e8;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.meal-details-ingredients-list {
+  list-style: none;
+}
+
+.meal-details-ingredients-item {
+  font-size: 18px;
+  color: #e8e8e8;
+  margin-top: 5px;
 }

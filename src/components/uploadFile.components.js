@@ -6,7 +6,7 @@ const UploadFileForm = () => {
   const [selectedImageToPreview, setSelectedImageToPreview] = useState(null)
 
   const { setLoading } = useContext(LoadingContext)
-  const { setClassification } = useContext(ClassificationContext)
+  const { classificationDispatch } = useContext(ClassificationContext)
   const inputRef = useRef(null)
   const handleImageChange = (event) => {
     const imageFile = event.target.files[0]
@@ -56,7 +56,13 @@ const UploadFileForm = () => {
 
       const foodClass = classificationData.result.class
 
-      setClassification(foodClass)
+      classificationDispatch({
+        type: 'UPDATE_CLASSIFICATION',
+        payload: {
+          class: foodClass,
+          image_url: image_url
+        }
+      })
 
       setLoading(false)
     } catch (error) {

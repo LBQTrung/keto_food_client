@@ -33,3 +33,37 @@ html {
 }
 
 /* End Responsive */
+
+/* Scroll bar */
+
+/* Ẩn thanh cuộn */
+.scrollbar {
+  /* scrollbar-width: none; */
+  -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE/Edge */
+}
+
+/* Chỉ hiển thị điểm trên thanh cuộn */
+/* .scrollbar::-webkit-scrollbar {
+  display: none;
+} */
+
+/* CSS cho thanh scroll */
+::-webkit-scrollbar {
+  width: 10px; /* Chiều rộng của thanh scroll */
+}
+
+/* CSS cho các track (vùng bên ngoài của thanh scroll) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Màu nền của track */
+}
+
+/* CSS cho thumb (thanh cuộn) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Màu nền của thumb */
+  border-radius: 5px; /* Độ cong của thumb */
+}
+
+/* CSS cho thumb khi hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Màu nền của thumb khi hover */
+}
