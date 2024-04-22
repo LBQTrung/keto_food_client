@@ -25,9 +25,14 @@ html {
   grid-template-columns: 20% 80%;
 }
 
+.grid-item-10 {
+  width: 100%;
+}
+
 .grid-container-3-3-3-3 {
+  width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: calc((100% - 30px) / 4) calc((100% - 30px) / 4) calc((100% - 30px) / 4) calc((100% - 30px) / 4);
   column-gap: 10px;
   row-gap: 20px;
 }

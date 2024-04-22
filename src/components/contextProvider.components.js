@@ -70,3 +70,31 @@ export const InstructionProvider = ({ children }) => {
     <InstructionContext.Provider value={{ instruction, instructionDispatch }}>{children}</InstructionContext.Provider>
   )
 }
+
+// Meal List Context
+export const MealsListContext = createContext()
+
+const mealsListReducer = (state, action) => {
+  switch (action.type) {
+    case 'UPDATE_MEALS_LIST':
+      return { ...action.payload }
+    default:
+      return state
+  }
+}
+
+export const MealsListProvider = ({ children }) => {
+  const [mealsList, mealsListDispatch] = useReducer(mealsListReducer, {
+    isSearch: false,
+    catelog: 'Popular',
+    meals: []
+  })
+
+  useEffect(() => {
+    window.addEventListener('popstate', () => {
+      mealsListDispatch({ type: 'RESET_INSTRUCTION' })
+    })
+  })
+
+  return <MealsListContext.Provider value={{ mealsList, mealsListDispatch }}>{children}</MealsListContext.Provider>
+}
