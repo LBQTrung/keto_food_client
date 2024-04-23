@@ -382,7 +382,7 @@ hr {
 .meal-details {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: calc((100% - 40px) / 3 - 10%) calc((100% - 40px) / 3 + 10%) calc((100% - 40px) / 3);
   column-gap: 20px;
   height: 80vh;
 }
@@ -393,7 +393,7 @@ hr {
 }
 
 .meal-details-info-img {
-  width: 250px;
+  /* width: 250px; */
   height: 200px;
   background-position: center;
   background-size: cover;

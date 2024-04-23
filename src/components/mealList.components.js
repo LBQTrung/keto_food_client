@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import { MealsListContext } from './contextProvider.components'
+import { useNavigate } from 'react-router-dom'
 
 const MealsList = () => {
   const { mealsList, mealsListDispatch } = useContext(MealsListContext)
+  const navigate = useNavigate()
   useEffect(() => {
     getRandomMeals(mealsList.catelog)
   }, [mealsList.catelog])
@@ -36,7 +38,15 @@ const MealsList = () => {
         meals: meals
       }
     })
-    console.log('cùng lắm chạy 2 lần')
+  }
+
+  const handleClickDetails = (mealId) => {
+    if (mealId) {
+      const query = new URLSearchParams({
+        meal_id: mealId
+      })
+      navigate('/recipe?' + query)
+    }
   }
 
   return (
@@ -54,7 +64,9 @@ const MealsList = () => {
               <h2 className='meal-item-name'>{!!meal && meal.meal_name}</h2>
               <div className='meal-item-origin-and-button'>
                 <span className='meal-item-origin'>{(!!meal && meal.area) || mealsList.catelog}</span>
-                <button className='meal-item-button'>Recipe</button>
+                <button onClick={() => handleClickDetails(meal.meal_id)} className='meal-item-button'>
+                  Recipe
+                </button>
               </div>
             </div>
           )

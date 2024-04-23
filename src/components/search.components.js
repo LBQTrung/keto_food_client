@@ -1,6 +1,10 @@
 import UploadFileForm from './uploadFile.components'
 
 const TextSearchForm = () => {
+  const handleSearch = () => {
+    
+  }
+
   return (
     <form className='search-form' method='POST'>
       <div className='search-form-group'>
