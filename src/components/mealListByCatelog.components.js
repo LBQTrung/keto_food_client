@@ -10,7 +10,7 @@ const MealsListByCatelog = () => {
         <CatelogSideBar catelog={catelog} setCatelog={setCatelog} />
       </div>
       <div className='grid-item-10'>
-        <MealsList catelog='popular' />
+        <MealsList mealsPerRow={4} catelog='popular' />
       </div>
     </div>
   )

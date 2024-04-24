@@ -37,6 +37,16 @@ html {
   row-gap: 20px;
 }
 
+.grid-container-24-24-24-24-24 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc((100% - 40px) / 5) calc((100% - 40px) / 5) calc((100% - 40px) / 5) calc((100% - 40px) / 5) calc(
+      (100% - 40px) / 5
+    );
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
 /* End Responsive */
 
 /* Scroll bar */

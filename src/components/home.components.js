@@ -10,7 +10,6 @@ const Home = () => {
   const location = useLocation()
   const queryParams = new URLSearchParams(location.search)
   const mealName = queryParams.get('meal_name')
-  console.log(mealName)
 
   return (
     <>

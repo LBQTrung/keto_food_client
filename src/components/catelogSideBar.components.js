@@ -9,6 +9,7 @@ const CatelogSideBar = ({ catelog, setCatelog }) => {
       type: 'UPDATE_MEALS_LIST',
       payload: {
         ...mealsList,
+        isSearch: false,
         catelog: catelog
       }
     })

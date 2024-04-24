@@ -1,10 +1,11 @@
 import { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ClassificationContext, InstructionContext } from './contextProvider.components'
+import { ClassificationContext, InstructionContext, MealsListContext } from './contextProvider.components'
 
 const Navbar = () => {
   const { classificationDispatch } = useContext(ClassificationContext)
   const { instructionDispatch } = useContext(InstructionContext)
+  const { mealsList, mealsListDispatch } = useContext(MealsListContext)
   const location = useLocation()
   return (
     <nav className='navbar'>
@@ -15,6 +16,13 @@ const Navbar = () => {
               onClick={() => {
                 classificationDispatch({ type: 'RESET_CLASSIFICATION' })
                 instructionDispatch({ type: 'RESET_INSTRUCTION' })
+                mealsListDispatch({
+                  type: 'UPDATE_MEALS_LIST',
+                  payload: {
+                    ...mealsList,
+                    isSearch: false
+                  }
+                })
               }}
               to='/'
             >
@@ -26,6 +34,13 @@ const Navbar = () => {
               onClick={() => {
                 classificationDispatch({ type: 'RESET_CLASSIFICATION' })
                 instructionDispatch({ type: 'RESET_INSTRUCTION' })
+                mealsListDispatch({
+                  type: 'UPDATE_MEALS_LIST',
+                  payload: {
+                    ...mealsList,
+                    isSearch: false
+                  }
+                })
               }}
               to='/recipe'
             >
@@ -37,6 +52,13 @@ const Navbar = () => {
               onClick={() => {
                 classificationDispatch({ type: 'RESET_CLASSIFICATION' })
                 instructionDispatch({ type: 'RESET_INSTRUCTION' })
+                mealsListDispatch({
+                  type: 'UPDATE_MEALS_LIST',
+                  payload: {
+                    ...mealsList,
+                    isSearch: false
+                  }
+                })
               }}
               to='/explore'
             >
@@ -48,6 +70,13 @@ const Navbar = () => {
               onClick={() => {
                 classificationDispatch({ type: 'RESET_CLASSIFICATION' })
                 instructionDispatch({ type: 'RESET_INSTRUCTION' })
+                mealsListDispatch({
+                  type: 'UPDATE_MEALS_LIST',
+                  payload: {
+                    ...mealsList,
+                    isSearch: false
+                  }
+                })
               }}
               to='/diet'
             >

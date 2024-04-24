@@ -92,7 +92,7 @@ export const MealsListProvider = ({ children }) => {
 
   useEffect(() => {
     window.addEventListener('popstate', () => {
-      mealsListDispatch({ type: 'RESET_INSTRUCTION' })
+      mealsListDispatch({ type: 'UPDATE_MEALS_LIST', payload: { ...mealsList, isSearch: false, catelog: 'Popular' } })
     })
   })
 

@@ -182,6 +182,24 @@ hr {
   color: var(--main-color);
 }
 
+/* Search result */
+.search-result {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-message {
+  color: #e8e8e8;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.search-result hr {
+  margin-top: 20px;
+}
+
 /* Upload file */
 .search-form-input--file {
   display: none;
