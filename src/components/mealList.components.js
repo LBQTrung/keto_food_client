@@ -83,7 +83,7 @@ const MealsList = ({ type, mealsPerRow, searchText, catelog, setSearchResultNumb
       {!!meals &&
         meals.map((meal) => {
           return (
-            <div className='meal-item grid-item-3-3-3-3'>
+            <div className='meal-item grid-item-3-3-3-3' onClick={() => handleClickDetails(meal.meal_id)}>
               {/* <img src={!!meal && meal.image_url} alt='bunbohue' className='meal-item-image' /> */}
               <div
                 style={{ backgroundImage: `url(${!!meal && meal.image_url})` }}
